@@ -4,7 +4,7 @@ class UserStore {
         this._isAuth = false
         this._isUser = false
         this._isEmployee = false
-        makeAutoObservable(true)
+        makeAutoObservable(this)
     }
 
     get isAuth(){
