@@ -14,7 +14,6 @@ export const userRoutes = [
     {
         path: Routes.HOME_ROUTE,
         Component: HomePage,
-
-    },
-]
+    }
+];
 

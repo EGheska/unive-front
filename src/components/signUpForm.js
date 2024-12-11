@@ -2,6 +2,7 @@ import React, {useContext, useEffect, useRef} from "react";
 import {useState} from "react";
 import "../styles/signUp.css"
 import {Context} from "../index";
+import {useNavigate} from "react-router-dom";
 
 const SignUpForm = () => {
     const [isSignUp, setIsSignUp] = useState(false);
@@ -23,6 +24,13 @@ const SignUpForm = () => {
 
     const toggleForm = () => {
         setIsSignUp((prev) => !prev);
+    };
+
+    const handleSignUp = (e) => {
+        e.preventDefault();
+        console.log("Submited");
+        UserStore.setUser(true);
+        console.log(UserStore.isAuth);
     };
 
     return (
@@ -66,7 +74,7 @@ const SignUpForm = () => {
                             Accept <a href="#">Terms and Conditions</a>
                         </label>
                     </div>
-                    <button type="submit">Sign Up</button>
+                    <button type="submit" onClick={handleSignUp}>Sign Up</button>
                     <footer>
                         <p>
                             Already have one?{" "}

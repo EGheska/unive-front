@@ -1,6 +1,7 @@
 import React from "react";
 import SignUpForm from "../components/signUpForm";
 import '../styles/signPage.css'
+import {useNavigate} from "react-router-dom";
 
 const SignPage = () => {
 
