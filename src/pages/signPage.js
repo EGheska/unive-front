@@ -6,7 +6,9 @@ const SignPage = () => {
 
     return (
         <div className="pageClass">
-            <div className="logo-container">Unive</div>
+            <div className="logo-container">
+                <img src="/univelogo.svg" alt="logo"/>
+            </div>
             <SignUpForm />
         </div>
     )

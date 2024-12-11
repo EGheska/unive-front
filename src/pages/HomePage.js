@@ -1,9 +1,10 @@
 import react from 'react';
+import AssignmentRoundedIcon from '@mui/icons-material/AssignmentRounded';
 
 const HomePage = () => {
     return (
         <div>
-            HOME
+            <AssignmentRoundedIcon />
         </div>
     )
 }
