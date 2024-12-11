@@ -3,22 +3,16 @@
     flex-grow: 1;
     font-family: Arial, sans-serif;
     height: auto;
-    /*align-items: center;*/
-    /*flex-direction: column;*/
     justify-content: center;
     margin: 0;
     position: relative;
     overflow: hidden;
     transition: height 0.5s ease;
-    /*box-sizing: border-box;*/
 }
 
 .form-container {
     width: 100%;
-    /*max-width: 425px;*/
     padding: 25px;
-    /*top: 0;*/
-    /*z-index: 1;*/
     box-sizing: border-box;
     transition: opacity 0.5s ease;
 }
@@ -37,20 +31,21 @@ form {
     box-sizing: border-box;
 }
 
+/* This is hardcoded part of a login-registration animation transition */
 .sign-up-form {
     margin-top: -90%;
 }
 
 form.hidden {
     opacity: 0;
-    transform: translateY(-20px); /* Slide up slightly */
-    pointer-events: none; /* Disable interaction with hidden forms */
+    transform: translateY(-20px);
+    pointer-events: none;
 }
 
 form.visible {
     opacity: 1;
-    transform: translateY(0); /* Reset slide */
-    pointer-events: all; /* Enable interaction */
+    transform: translateY(0);
+    pointer-events: all;
 }
 
 form h1 {
@@ -93,7 +88,7 @@ input[type="checkbox"] {
     display: flex;
     align-items: center;
     justify-content: start;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     font-size: 14px;
     color: #555;
 }

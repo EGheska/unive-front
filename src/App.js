@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-dom
 import HomePage from './pages/HomePage';
 import SignPage from './pages/signPage';
 
+
 function App() {
     const isSignedIn = false;
     return (

@@ -37,7 +37,7 @@ const SignUpForm = () => {
                     <footer>
                         <p>
                             Don’t have an account?{" "}
-                            <a href="#" onClick={toggleForm}>
+                            <a onClick={toggleForm}>
                                 Create an account
                             </a>
                         </p>
@@ -63,8 +63,8 @@ const SignUpForm = () => {
                     <button type="submit">Sign Up</button>
                     <footer>
                         <p>
-                            Already have an account?{" "}
-                            <a href="#" onClick={toggleForm}>
+                            Already have one?{" "}
+                            <a onClick={toggleForm}>
                                 Sign in
                             </a>
                         </p>
