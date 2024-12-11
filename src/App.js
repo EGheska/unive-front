@@ -1,6 +1,5 @@
 import './App.css';
 import {BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-dom';
-import {routes} from './util/routes.js';
 import HomePage from './pages/HomePage';
 import SignPage from './pages/signPage';
 
