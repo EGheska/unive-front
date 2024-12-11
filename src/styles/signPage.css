@@ -12,12 +12,14 @@
 }
 
 .logo-container {
-    margin-top: 10%;
-    margin-bottom: 3%; /* Space between the logo and the form */
+    flex-grow: 0;
+    margin-top: 5%;
+    margin-bottom: 3%;
     text-align: center;
 }
 .footer {
-    flex-grow: 1;
+    /*margin-top: auto;*/
+    /*flex-grow: 1;*/
     width: 100%;
     display: flex;
     justify-content: flex-end;

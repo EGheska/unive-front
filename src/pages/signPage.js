@@ -8,7 +8,7 @@ const SignPage = () => {
         <div className="pageClass">
             <div className="logo-container">Unive</div>
             <SignUpForm />
-            <div className="footer"></div>
+            {/*<div className="footer"></div>*/}
         </div>
     )
 };

@@ -1,21 +1,56 @@
-.login-form {
-    font-family: Arial, sans-serif;
+.auth-container {
     display: flex;
+    flex-grow: 1;
+    font-family: Arial, sans-serif;
+    height: auto;
+    /*align-items: center;*/
+    /*flex-direction: column;*/
     justify-content: center;
-    align-items: center;
-    /*height: 100vh;*/
     margin: 0;
-    /*background-color: #f5f5f5;*/
+    position: relative;
+    overflow: hidden;
+    transition: height 0.5s ease;
+    /*box-sizing: border-box;*/
+}
+
+.form-container {
+    width: 100%;
+    /*max-width: 425px;*/
+    padding: 25px;
+    /*top: 0;*/
+    /*z-index: 1;*/
+    box-sizing: border-box;
+    transition: opacity 0.5s ease;
 }
 
 form {
     max-width: 425px;
-    max-height: 428px;
-    padding: 30px 30px 0px 30px;
+    max-height: 606px;
+    padding: 30px 30px 1px 30px;
     background: white;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 6px;
     text-align: center;
+    opacity: 1;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.sign-up-form {
+    margin-top: -90%;
+}
+
+form.hidden {
+    opacity: 0;
+    transform: translateY(-20px); /* Slide up slightly */
+    pointer-events: none; /* Disable interaction with hidden forms */
+}
+
+form.visible {
+    opacity: 1;
+    transform: translateY(0); /* Reset slide */
+    pointer-events: all; /* Enable interaction */
 }
 
 form h1 {
@@ -31,6 +66,8 @@ form p {
 }
 
 input[type="email"],
+input[type="text"],
+input[type="date"],
 input[type="password"] {
     width: 100%;
     padding: 12px;
@@ -97,4 +134,15 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateX(-100%);
+    pointer-events: none;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateX(0);
 }
