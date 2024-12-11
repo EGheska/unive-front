@@ -27,3 +27,5 @@ class UserStore {
         this._isAuth = state;
     }
 }
+
+export default UserStore;

@@ -1,1 +1,0 @@
-export {default as SignPage} from './components/SignPage';

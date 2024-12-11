@@ -1,10 +1,16 @@
-import React, {useEffect, useRef} from "react";
+import React, {useContext, useEffect, useRef} from "react";
 import {useState} from "react";
 import "../styles/signUp.css"
+import {Context} from "../index";
 
 const SignUpForm = () => {
     const [isSignUp, setIsSignUp] = useState(false);
     const containerRef = useRef(null);
+
+    // Ideally i need to do following in parent class,
+    // so the component still can be reusable and unique
+
+    const {UserStore} = useContext(Context);
 
     useEffect(() => {
         if (containerRef.current) {
