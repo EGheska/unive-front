@@ -7,6 +7,7 @@ import {useNavigate} from "react-router-dom";
 const SignUpForm = () => {
     const [isSignUp, setIsSignUp] = useState(false);
     const containerRef = useRef(null);
+    const navigate = useNavigate();
 
     // Ideally i need to do following in parent class,
     // so the component still can be reusable and unique
@@ -30,8 +31,18 @@ const SignUpForm = () => {
         e.preventDefault();
         console.log("Submited");
         UserStore.setUser(true);
+        navigate("/")
         console.log(UserStore.isAuth);
     };
+
+    const handleSignIn = (e) => {
+        // api call to check the user and render a page regardingly
+        e.preventDefault();
+        console.log("Logged");
+        UserStore.setUser(true);
+        navigate("/")
+        console.log(UserStore.isAuth);
+    }
 
     return (
         <div className="auth-container" ref={containerRef}>
@@ -47,7 +58,7 @@ const SignUpForm = () => {
                         <input type="checkbox"/>
                         <label>Remember me</label>
                     </div>
-                    <button type="submit">Sign In</button>
+                    <button type="submit" onClick={handleSignIn}>Sign In</button>
                     <footer>
                         <p>
                             Don’t have an account?{" "}
