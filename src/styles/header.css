@@ -1,0 +1,20 @@
+.univelogo {
+    max-height: 47px;
+    max-width: 156px;
+    margin-left: 233px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 70px;
+    justify-content: space-between;
+}
+
+.logout {
+    margin-right: 233px;
+}
