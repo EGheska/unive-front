@@ -8,8 +8,8 @@ const HomePage = () => {
         <div className="pageClass-home">
             <Header />
             <div className="header-container">
-                <p>My dashboard</p>
-                <p>Welcome, here is an overview for you</p>
+                <p className="homepage-header-p">My dashboard</p>
+                <p className="homepage-header-sub-p">Welcome, here is an overview for you</p>
             </div>
             <div className="main-container">
                 <Navbar className="nav"/>

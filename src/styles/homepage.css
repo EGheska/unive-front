@@ -22,6 +22,14 @@
     margin-right: auto;
 }
 
+.header-container {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 27px;
+}
+
 .content-container {
     flex: 1;
     box-sizing: border-box;
@@ -36,4 +44,16 @@
     padding: 1rem;
     box-sizing: border-box; /* Include padding in width/height */
     overflow-y: auto; /* Allow scrolling if content exceeds height */
+}
+
+.homepage-header-p {
+    color: #125c30;
+    font-size: 48px;
+    font-weight: 500;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.homepage-header-sub-p {
+    color: #25dc71;
 }
