@@ -14,7 +14,24 @@ const HomePage = () => {
             <div className="main-container">
                 <Navbar className="nav"/>
                 <div className="content-container">
-                    asdasd
+                    <div className="personal-information-container">
+
+                    </div>
+                    <div className="notifications-container">
+
+                    </div>
+                    <div className="policies-container">
+
+                    </div>
+                    <div className="claims-container">
+
+                    </div>
+                    <div className="payment-container">
+
+                    </div>
+                    <div className="faq-container">
+
+                    </div>
                 </div>
             </div>
         </div>
