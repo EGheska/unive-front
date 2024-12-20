@@ -46,6 +46,32 @@
     overflow-y: auto; /* Allow scrolling if content exceeds height */
 }
 
+.personal-info-container {
+    max-width: 600px;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.personal-info-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.personal-info-table td {
+    padding: 8px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.personal-info-table td:first-child {
+    font-weight: bold;
+    color: #555;
+    width: 200px;
+}
+
+
 .homepage-header-p {
     color: #125c30;
     font-size: 48px;
