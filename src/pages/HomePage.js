@@ -12,12 +12,18 @@ const personalInfoDTO = {
     address: "Haverstraatpassage 12B , 7511EW , ENSCHEDE",
     email: "unknown@who.knows.email",
     phoneNumber: "+12 3 45 67 89 00",
-};
+}
+
+const notificationsDTO = [
+    {policyNumber: "XP93028476", status: "Expired", expirationDate: "09/15/2024"},
+    {policyNumber: "YP65038241", status: "Ongoing", expirationDate: "10/31/2025"},
+];
+
 
 const HomePage = () => {
     return (
         <div className="pageClass-home">
-            <Header />
+            <Header/>
             <div className="header-container">
                 <p className="homepage-header-p">My dashboard</p>
                 <p className="homepage-header-sub-p">Welcome, here is an overview for you</p>
@@ -73,29 +79,113 @@ const HomePage = () => {
                             )}
                             </tbody>
                         </table>
-                        <button className="personal-info-edit-button">
+                        <button className="edit-button">
                             Edit <span>→</span>
                         </button>
                     </div>
                     <div className="notifications-container">
-
+                        <h2>Notifications</h2>
+                        <table className="notifications-table">
+                            <thead>
+                            <tr>
+                                <th>Policy number</th>
+                                <th>Status</th>
+                                <th>Expiration date</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {notificationsDTO.map((notification, index) => (
+                                <tr key={index}>
+                                    <td>{notification.policyNumber}</td>
+                                    <td>{notification.status}</td>
+                                    <td>{notification.expirationDate}</td>
+                                </tr>
+                            ))}
+                            </tbody>
+                        </table>
+                        <button className="goto-button">
+                            All Notifications <span>→</span>
+                        </button>
                     </div>
-                        <div className="policies-container">
+                    <div className="notifications-container">
+                        <h2>Policies</h2>
+                        <table className="notifications-table">
+                            <thead>
+                            <tr>
+                                <th>Policy number</th>
+                                <th>Status</th>
+                                <th>Expiration date</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {notificationsDTO.map((notification, index) => (
+                                <tr key={index}>
+                                    <td>{notification.policyNumber}</td>
+                                    <td>{notification.status}</td>
+                                    <td>{notification.expirationDate}</td>
+                                </tr>
+                            ))}
+                            </tbody>
+                        </table>
+                        <button className="goto-button">
+                            Overview Policies <span>→</span>
+                        </button>
+                    </div>
+                    <div className="notifications-container">
+                        <h2>Claims</h2>
+                        <table className="notifications-table">
+                            <thead>
+                            <tr>
+                                <th>Policy number</th>
+                                <th>Status</th>
+                                <th>Expiration date</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {notificationsDTO.map((notification, index) => (
+                                <tr key={index}>
+                                    <td>{notification.policyNumber}</td>
+                                    <td>{notification.status}</td>
+                                    <td>{notification.expirationDate}</td>
+                                </tr>
+                            ))}
+                            </tbody>
+                        </table>
+                        <button className="goto-button">
+                            Overview Claims <span>→</span>
+                        </button>
+                    </div>
+                    <div className="notifications-container">
+                        <h2>Payments</h2>
+                        <table className="notifications-table">
+                            <thead>
+                            <tr>
+                                <th>Policy number</th>
+                                <th>Status</th>
+                                <th>Expiration date</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {notificationsDTO.map((notification, index) => (
+                                <tr key={index}>
+                                    <td>{notification.policyNumber}</td>
+                                    <td>{notification.status}</td>
+                                    <td>{notification.expirationDate}</td>
+                                </tr>
+                            ))}
+                            </tbody>
+                        </table>
+                        <button className="goto-button">
+                            All Payments <span>→</span>
+                        </button>
+                    </div>
+                    <div className="faq-container">
 
-                        </div>
-                        <div className="claims-container">
-
-                        </div>
-                        <div className="payment-container">
-
-                        </div>
-                        <div className="faq-container">
-
-                        </div>
                     </div>
                 </div>
             </div>
-            )
-            }
+        </div>
+    )
+}
 
-            export default HomePage;
+export default HomePage;
