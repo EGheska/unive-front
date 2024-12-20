@@ -73,10 +73,13 @@ const HomePage = () => {
                             )}
                             </tbody>
                         </table>
+                        <button className="personal-info-edit-button">
+                            Edit <span>→</span>
+                        </button>
                     </div>
-                        <div className="notifications-container">
+                    <div className="notifications-container">
 
-                        </div>
+                    </div>
                         <div className="policies-container">
 
                         </div>
