@@ -13,11 +13,13 @@ const AppRouter = () => {
         <Routes>
             {
                 !UserStore.isAuth && routes.map(({path, Component}) => (
+                    // console.log("Rendering a component: ", Component)
                     <Route key={path} path={path} element={<Component/>}/>
                 ))
             }
             {
                 UserStore.isAuth && userRoutes.map(({path, Component}) => (
+                    // console.log("Rendering a component: ", Component)
                     <Route key={path} path={path} element={<Component/>}/>
                 ))
             }
