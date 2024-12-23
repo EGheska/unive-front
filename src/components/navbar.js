@@ -60,8 +60,7 @@ const Navbar = () => {
                 <NavLink to="/payments" className="navbar-link">Payments</NavLink>
             </div>
             <div className={`navbar-nav ${location.pathname === "/faq" ? "selected" : ""}`}>
-                {/*<img src="/dashboard_icon.png" alt="Dashboard" className="icon-unselected"/>*/}
-                <NavLink to="/faq" className="navbar-link">FAQ</NavLink>
+                <NavLink to="/faq" className="navbar-link" style={{ textAlign: "center"}} t>FAQ</NavLink>
             </div>
         </div>
     );

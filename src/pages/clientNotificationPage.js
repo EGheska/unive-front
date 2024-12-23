@@ -20,7 +20,7 @@ const clientNotificationPage = () => {
             <Header/>
             <div className="header-container">
                 <p className="homepage-header-p">My Notifications</p>
-                <p className="homepage-header-sub-p">asd</p>
+                <div className="homepage-header-empty-space"></div>
                 {/*<div className="space-between"></div>*/}
             </div>
             <div className="main-container">
