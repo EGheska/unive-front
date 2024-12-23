@@ -18,6 +18,7 @@
 /* dont forget to add max-width parameter later on */
 .main-container {
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
     width: 848px;
     margin-left: auto;
@@ -38,10 +39,11 @@
     box-sizing: border-box;
 }
 .nav {
-    flex: 0 0 250px; /* Fixed width for the navbar */
+    flex: 0 0 160px; /* Fixed width for the navbar */
     background-color: #333;
     color: white;
     height: 100vh; /* Full height to span vertically */
+    width: 160px;
     display: flex;
     flex-direction: column;
     padding: 1rem;
