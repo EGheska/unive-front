@@ -14,7 +14,7 @@ const messages = [
     {id: 6, type: "New insurance", date: "16/12/2024"},
 ];
 
-const clientNotificationPage = () => {
+const ClientNotificationPage = () => {
     return (
         <div className="pageClass-home-notifications">
             <Header/>
@@ -57,4 +57,4 @@ const clientNotificationPage = () => {
     )
 };
 
-export default clientNotificationPage;
+export default ClientNotificationPage;
