@@ -3,6 +3,7 @@ import * as Routes from "./const";
 import SignPage from "../pages/signPage.js"
 import HomePage from "../pages/HomePage";
 import clientNotificationPage from "../pages/clientNotificationPage";
+import clientPolicyPage from "../pages/clientPolicyPage";
 
 export const routes = [
     {
@@ -19,6 +20,10 @@ export const userRoutes = [
     {
         path: Routes.NOTIFICATION,
         Component: clientNotificationPage,
+    },
+    {
+        path: Routes.POLICIES_ROUTE,
+        Component: clientPolicyPage,
     }
 ];
 
