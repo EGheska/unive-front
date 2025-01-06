@@ -4,6 +4,7 @@ import SignPage from "../pages/signPage.js"
 import HomePage from "../pages/HomePage";
 import ClientNotificationPage from "../pages/clientNotificationPage";
 import ClientPolicyPage from "../pages/clientPolicyPage";
+import ClientClaimPage from "../pages/clientClaimPage";
 
 export const routes = [
     {
@@ -24,6 +25,10 @@ export const userRoutes = [
     {
         path: Routes.POLICIES_ROUTE,
         Component: ClientPolicyPage,
+    },
+    {
+        path: Routes.CLAIMS_ROUTE,
+        Component: ClientClaimPage,
     }
 ];
 
