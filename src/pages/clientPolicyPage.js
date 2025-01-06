@@ -88,7 +88,7 @@ const ClientPolicyPage = () => {
                                 </div>
                             </div>
                             <div className="policy-detailed-pdf">
-                                asd
+                                <img className="pdf-image-policy" src="/image%208.png"></img>
                             </div>
                         </div>
                     )}
