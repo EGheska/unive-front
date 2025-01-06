@@ -29,8 +29,12 @@ const ClientNotificationPage = () => {
                     <div className="messages-header">
                         <h2>Messages</h2>
                         <div className="messages-actions">
-                            <button className="icon-button">📧</button>
-                            <button className="icon-button">🗑️</button>
+                            <button className="icon-button">
+                                <img src="/read-icon.png"></img>
+                            </button>
+                            <button className="icon-button">
+                                <img src="/delete-icon.png"></img>
+                            </button>
                         </div>
                     </div>
                     <table className="messages-table">

@@ -21,7 +21,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
 }
 
 .messages-header h2 {
@@ -29,12 +29,17 @@
     margin: 0;
 }
 
+.messages-actions {
+    display: flex;
+    flex-direction: row;
+}
+
 .messages-actions .icon-button {
     background: none;
     border: none;
     font-size: 18px;
     cursor: pointer;
-    margin-left: 10px;
+    /*margin-left: 10px;*/
 }
 
 .messages-table {
@@ -66,3 +71,4 @@
     width: 100%;
     height: 53px;
 }
+
