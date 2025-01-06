@@ -78,12 +78,14 @@ const ClientPolicyPage = () => {
                                         </tr>
                                     </table>
                                 </div>
-                                <button className="view-button">
-                                    View
-                                </button>
-                                <button className="view-button">
-                                    Download
-                                </button>
+                                <div className="policy-detailed-buttons">
+                                    <button className="view-button">
+                                        View
+                                    </button>
+                                    <button className="view-button">
+                                        Download
+                                    </button>
+                                </div>
                             </div>
                             <div className="policy-detailed-pdf">
                                 asd

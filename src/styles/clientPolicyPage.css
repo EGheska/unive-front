@@ -42,10 +42,10 @@
 
 .policy-detailed-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     /*flex-direction: row;*/
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
     margin-top: 30px;
     width: 622px;
     min-height: 182px;
@@ -58,14 +58,15 @@
 }
 
 .policy-detailed-container-inner {
+    width: 50%;
     display: flex;
-    flex-direction: row;
-    /*flex: ;*/
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 .policy-detailed-table {
-    width: 326px;
-    /*border-collapse: collapse;*/
+    width: auto;
+    text-align: left;
 }
 
 .policy-detailed-table table {
@@ -86,18 +87,27 @@
     height: 398px;
 }
 
+.policy-detailed-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 248px;
+}
+
 .view-button {
-    margin-top: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     width: 90px;
     height: 20px;
-    background: #6c63ff;
+    padding: 10px 20px;
+    background-color: #a5a1f7;;
     color: white;
     border: none;
-    padding: 10px 20px;
-    margin: 0 5px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 10px;
 }
 
 .view-button:hover {
