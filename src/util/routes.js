@@ -7,6 +7,7 @@ import ClientPolicyPage from "../pages/clientPolicyPage";
 import ClientClaimPage from "../pages/clientClaimPage";
 import {Component} from "react";
 import clientPaymentPage from "../pages/clientPaymentPage";
+import ClientPersonalInformation from "../pages/clientPersonalInformation";
 
 export const routes = [
     {
@@ -35,6 +36,10 @@ export const userRoutes = [
     {
         path: Routes.PAYMENTS_ROUTE,
         Component: clientPaymentPage,
+    },
+    {
+        path: Routes.PERSONAL_ROUTE,
+        Component: ClientPersonalInformation,
     }
 ];
 
