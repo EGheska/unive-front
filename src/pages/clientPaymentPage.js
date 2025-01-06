@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import Header from "../components/header";
 import Navbar from "../components/navbar";
-import '../styles/clientClaimPage.css';
+import '../styles/clientPaymentPage.css';
 
 const policies = [
     {name: "XP93028476", status: "expired", date: "09/15/2024", progress: "100%"},
@@ -10,7 +10,7 @@ const policies = [
 ]
 
 
-const ClientClaimPage = () => {
+const ClientPaymentPage = () => {
     const [selectedPolicy, setSelectedPolicy] = useState(null);
 
     const handleRowClick = (policy) => {
@@ -18,21 +18,22 @@ const ClientClaimPage = () => {
         console.log("selected policy: ", selectedPolicy);
     };
     return (
-        <div className="pageClass-home-claims">
+        <div className="pageClass-home-payment">
             <Header/>
             <div className="header-container">
-                <p className="homepage-header-p">My Claims</p>
+                <p className="homepage-header-p">My Payments</p>
                 <div className="homepage-header-empty-space"></div>
             </div>
             <div className="main-container">
                 <Navbar className="nav"/>
                 <div className="policy-container-main">
-                    <div className="claims-container">
-                        <table className="claims-table">
+                    <div className="payment-container">
+                        <table className="payment-table">
                             <thead>
                             <tr>
-                                <th>Claim number</th>
+                                <th>Payment number</th>
                                 <th>Status</th>
+                                <th>Expiration Date</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -45,6 +46,7 @@ const ClientClaimPage = () => {
                                     className={policy.name === selectedPolicy?.name ? "selected-row" : ""}>
                                     <td>{policy.name}</td>
                                     <td>{policy.status}</td>
+                                    <td>{policy.date}</td>
                                 </tr>
                             ))}
                             </tbody>
@@ -54,12 +56,12 @@ const ClientClaimPage = () => {
                         </button>
                     </div>
                     {selectedPolicy && (
-                        <div className="claims-detailed-container">
-                            <div className="claims-detailed-container-inner">
-                                <div className="claims-detailed-table">
-                                    <table className="claims-detailed-table">
+                        <div className="payment-detailed-container">
+                            <div className="payment-detailed-container-inner">
+                                <div className="payment-detailed-table">
+                                    <table className="payment-detailed-table">
                                         <tr>
-                                            <td>Claim number</td>
+                                            <td>Payment reference</td>
                                             <td>{selectedPolicy.name}</td>
                                         </tr>
                                         <tr>
@@ -76,30 +78,7 @@ const ClientClaimPage = () => {
                                         </tr>
                                     </table>
                                 </div>
-                                <div className="claim-status-bar-container">
-                                    <div className="status-bar">
-                                        <div
-                                            className="progress"
-                                            style={{
-                                                width: selectedPolicy.progress,
-                                            }}
-                                        ></div>
-                                        <div
-                                            className="marker"
-                                            style={{
-                                                left: selectedPolicy.progress,
-                                            }}
-                                        ></div>
-                                        <div
-                                            className="label"
-                                            style={{
-                                                left: selectedPolicy.progress,
-                                            }}
-                                        >
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="claims-detailed-buttons">
+                                <div className="policy-detailed-buttons">
                                     <button className="view-button">
                                         View
                                     </button>
@@ -108,7 +87,7 @@ const ClientClaimPage = () => {
                                     </button>
                                 </div>
                             </div>
-                            <div className="claims-detailed-pdf">
+                            <div className="payment-detailed-pdf">
                                 <img className="pdf-image-policy" src="/image%208.png"></img>
                             </div>
                         </div>
@@ -119,4 +98,4 @@ const ClientClaimPage = () => {
     )
 }
 
-export default ClientClaimPage;
+export default ClientPaymentPage;

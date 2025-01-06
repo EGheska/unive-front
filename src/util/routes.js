@@ -5,6 +5,8 @@ import HomePage from "../pages/HomePage";
 import ClientNotificationPage from "../pages/clientNotificationPage";
 import ClientPolicyPage from "../pages/clientPolicyPage";
 import ClientClaimPage from "../pages/clientClaimPage";
+import {Component} from "react";
+import clientPaymentPage from "../pages/clientPaymentPage";
 
 export const routes = [
     {
@@ -29,6 +31,10 @@ export const userRoutes = [
     {
         path: Routes.CLAIMS_ROUTE,
         Component: ClientClaimPage,
+    },
+    {
+        path: Routes.PAYMENTS_ROUTE,
+        Component: clientPaymentPage,
     }
 ];
 
