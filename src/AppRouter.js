@@ -8,6 +8,7 @@ const AppRouter = () => {
     const {UserStore} = useContext(Context);
     console.log("USER " + UserStore.isUser);
     console.log("AUTH " + UserStore.isAuth);
+    console.log("EMPLOYEE " + UserStore.isEmployee);
     // let userState = UserStore.isAuth;
     return (
         <Routes>

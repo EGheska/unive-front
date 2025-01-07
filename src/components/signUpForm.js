@@ -5,12 +5,11 @@ import {Context} from "../index";
 import {useNavigate} from "react-router-dom";
 
 const SignUpForm = () => {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
     const [isSignUp, setIsSignUp] = useState(false);
     const containerRef = useRef(null);
     const navigate = useNavigate();
-
-    // Ideally i need to do following in parent class,
-    // so the component still can be reusable and unique
 
     const {UserStore} = useContext(Context);
 
@@ -30,19 +29,28 @@ const SignUpForm = () => {
     const handleSignUp = (e) => {
         e.preventDefault();
         console.log("Submited");
-        UserStore.setUser(true);
-        navigate("/")
+        if (email.includes("unive")){
+            UserStore.setEmployee(true);
+            navigate("/home")
+        } else {
+            UserStore.setUser(true);
+            navigate("/")
+        }
         console.log(UserStore.isAuth);
     };
 
     const handleSignIn = (e) => {
-        // api call to check the user and render a page regardingly
         e.preventDefault();
         console.log("Logged");
-        UserStore.setUser(true);
-        navigate("/")
+        if (email.includes("unive")){
+            UserStore.setEmployee(true);
+            navigate("/home")
+        } else {
+            UserStore.setUser(true);
+            navigate("/")
+        }
         console.log(UserStore.isAuth);
-    }
+    };
 
     return (
         <div className="auth-container" ref={containerRef}>
@@ -52,8 +60,18 @@ const SignUpForm = () => {
                 >
                     <h1>Sign In</h1>
                     <p>Welcome, please sign in to continue</p>
-                    <input type="email" placeholder="Email*" required/>
-                    <input type="password" placeholder="Password*" required/>
+                    <input
+                        onChange={(e) => setEmail(e.target.value)}
+                        type="email"
+                        placeholder="Email*"
+                        required
+                    />
+                    <input
+                        onChange={(e) => setPassword(e.target.value)}
+                        type="password"
+                        placeholder="Password*"
+                        required
+                    />
                     <div className="remember">
                         <input type="checkbox"/>
                         <label>Remember me</label>

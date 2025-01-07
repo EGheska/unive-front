@@ -43,3 +43,10 @@ export const userRoutes = [
     }
 ];
 
+export const employeeRoutes = [
+    // {
+    //     path: Routes.EMPLOYEE_HOME_ROUTE,
+    //     Component:
+    // }
+]
+
