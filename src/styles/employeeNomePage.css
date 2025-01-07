@@ -1,0 +1,14 @@
+.pageClass-home-employee {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background: url("../../public/Frame2.png") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.content-container-employee {
+    box-sizing: border-box;
+    width: 100%;
+
+}
