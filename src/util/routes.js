@@ -8,6 +8,9 @@ import ClientClaimPage from "../pages/clientClaimPage";
 import clientPaymentPage from "../pages/clientPaymentPage";
 import ClientPersonalInformation from "../pages/clientPersonalInformation";
 import employeeHomePage from "../pages/employeeHomePage";
+import {Route} from "react-router-dom";
+import EmployeeCustomerLibrary from "../pages/employeeCustomerLibrary";
+import EmployeeNewCustomer from "../pages/employeeNewCustomer";
 
 export const routes = [
     {
@@ -47,6 +50,14 @@ export const employeeRoutes = [
     {
         path: Routes.EMPLOYEE_HOME_ROUTE,
         Component: employeeHomePage,
+    },
+    {
+        path: Routes.EMPLOYEE_CUSTOMER_LIBRARY_ROUTE,
+        Component: EmployeeCustomerLibrary,
+    },
+    {
+        path: Routes.EMPLOYEE_NEW_CUSTOMER,
+        Component: EmployeeNewCustomer,
     }
 ]
 
