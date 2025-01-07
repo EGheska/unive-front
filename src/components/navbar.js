@@ -1,67 +1,85 @@
-import React from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import '../styles/navbar.css';
 import {NavLink, useLocation} from "react-router-dom";
+import UserStore from "../store/user_store";
+import {Context} from "../index";
 
 const Navbar = () => {
+    const {UserStore} = useContext(Context);
+    const [isUser, setIsUser] = useState(null);
     const location = useLocation();
+
+    const navItems = [
+        {path: "/", label: "Dashboard", icon: "/dashboard_icon.png", selectedIcon: "/dashboard_selected.png"},
+        {
+            path: "/personal-info",
+            label: "Personal Info.",
+            icon: "/personal_info_icon.svg",
+            selectedIcon: "/personal_info_selected.svg"
+        },
+        {
+            path: "/notifications",
+            label: "Notifications",
+            icon: "/notifications_unselected.png",
+            selectedIcon: "/notifications_icon_selected.png"
+        },
+        {path: "/policies", label: "Policies", icon: "/policies_icon.png", selectedIcon: "/policy_selected.png"},
+        {path: "/claims", label: "Claims", icon: "/claims_icon.png", selectedIcon: "/claims_selected.png"},
+        {path: "/payments", label: "Payments", icon: "/payments_icon.png", selectedIcon: "/payments_selected.png"},
+        {path: "/faq", label: "FAQ", icon: null, selectedIcon: null},
+    ];
+
+    const navItemsEmployee = [
+        {path: "/home", label: "Dashboard", icon: "/dashboard_icon.png", selectedIcon: "/dashboard_selected.png"},
+        {path: "/customer", label: "Customer Library", icon: "/personal_info_icon.svg", selectedIcon: "/personal_info_selected.svg"},
+        {path: "/new-customer", label: "New Customer", icon: "/plus.png", selectedIcon: "/plus_selected.png"},
+    ]
+
+    useEffect(() => {
+        if (UserStore.isUser) {
+            setIsUser(true)
+        } else if (UserStore.isEmployee) {
+            setIsUser(false)
+        }
+    }, [isUser]);
+
+    if (!isUser) {
+        return (
+            <div className="navbar-container">
+                {navItemsEmployee.map(({path, label, icon, selectedIcon}) => (
+                    <div key={path} className={`navbar-nav ${location.pathname === path ? "selected" : ""}`}>
+                        {icon && selectedIcon && (
+                            <img
+                                src={location.pathname === path ? selectedIcon : icon}
+                                alt={label}
+                                className="icon-unselected"
+                            />
+                        )}
+                        <NavLink to={path} className="navbar-link" style={path === "/faq" ? {textAlign: "center"} : {}}>
+                            {label}
+                        </NavLink>
+                    </div>
+                ))}
+            </div>
+        )
+    }
 
     return (
         <div className="navbar-container">
-            <div className={`navbar-nav ${location.pathname === "/" ? "selected" : ""}`}>
-                {location.pathname === "/" ? (
-                <img src="/dashboard_selected.png" alt="Dashboard" className="icon-unselected"/>
-            ) : (
-                <img src="/dashboard_icon.png" alt="Dashboard" className="icon-unselected"/>
-            )}
-                <NavLink to="/" className="navbar-link">
-                    Dashboard
-                </NavLink>
-            </div>
-            <div className={`navbar-nav ${location.pathname === "/personal-info" ? "selected" : ""}`}>
-                {location.pathname === "/personal-info" ? (
-                    <img src="/personal_info_selected.svg" alt="Dashboard" className="icon-unselected"/>
-                ) : (
-                    <img src="/personal_info_icon.svg" alt="Dashboard" className="icon-unselected"/>
-                )}
-                <NavLink to="/personal-info" className="navbar-link">
-                    Personal Info.
-                </NavLink>
-            </div>
-            <div className={`navbar-nav ${location.pathname === "/notifications" ? "selected" : ""}`}>
-                {location.pathname === "/notifications" ? (
-                    <img src="/notifications_icon_selected.png" alt="Dashboard" className="icon-unselected"/>
-                ) : (
-                    <img src="/notifications_unselected.png" alt="Dashboard" className="icon-unselected"/>
-                )}
-                <NavLink to="/notifications" className="navbar-link">Notifications</NavLink>
-            </div>
-            <div className={`navbar-nav ${location.pathname === "/policies" ? "selected" : ""}`}>
-                {location.pathname === "/policies" ? (
-                    <img src="/policy_saelected.png" alt="Dashboard" className="icon-unselected"/>
-                ) : (
-                    <img src="/policies_icon.png" alt="Dashboard" className="icon-unselected"/>
-                )}
-                <NavLink to="/policies" className="navbar-link">Policies</NavLink>
-            </div>
-            <div className={`navbar-nav ${location.pathname === "/claims" ? "selected" : ""}`}>
-                {location.pathname === "/claims" ? (
-                    <img src="/claims_selected.png" alt="Dashboard" className="icon-unselected"/>
-                ) : (
-                    <img src="/claims_icon.png" alt="Dashboard" className="icon-unselected"/>
-                )}
-                <NavLink to="/claims" className="navbar-link">Claims</NavLink>
-            </div>
-            <div className={`navbar-nav ${location.pathname === "/payments" ? "selected" : ""}`}>
-                {location.pathname === "/payments" ? (
-                    <img src="/payments_selected.png" alt="Dashboard" className="icon-unselected"/>
-                ) : (
-                    <img src="/payments_icon.png" alt="Dashboard" className="icon-unselected"/>
-                )}
-                <NavLink to="/payments" className="navbar-link">Payments</NavLink>
-            </div>
-            <div className={`navbar-nav ${location.pathname === "/faq" ? "selected" : ""}`}>
-                <NavLink to="/faq" className="navbar-link" style={{ textAlign: "center"}} t>FAQ</NavLink>
-            </div>
+            {navItems.map(({path, label, icon, selectedIcon}) => (
+                <div key={path} className={`navbar-nav ${location.pathname === path ? "selected" : ""}`}>
+                    {icon && selectedIcon && (
+                        <img
+                            src={location.pathname === path ? selectedIcon : icon}
+                            alt={label}
+                            className="icon-unselected"
+                        />
+                    )}
+                    <NavLink to={path} className="navbar-link" style={path === "/faq" ? {textAlign: "center"} : {}}>
+                        {label}
+                    </NavLink>
+                </div>
+            ))}
         </div>
     );
 };

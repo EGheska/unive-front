@@ -5,9 +5,9 @@ import HomePage from "../pages/HomePage";
 import ClientNotificationPage from "../pages/clientNotificationPage";
 import ClientPolicyPage from "../pages/clientPolicyPage";
 import ClientClaimPage from "../pages/clientClaimPage";
-import {Component} from "react";
 import clientPaymentPage from "../pages/clientPaymentPage";
 import ClientPersonalInformation from "../pages/clientPersonalInformation";
+import employeeHomePage from "../pages/employeeHomePage";
 
 export const routes = [
     {
@@ -44,9 +44,9 @@ export const userRoutes = [
 ];
 
 export const employeeRoutes = [
-    // {
-    //     path: Routes.EMPLOYEE_HOME_ROUTE,
-    //     Component:
-    // }
+    {
+        path: Routes.EMPLOYEE_HOME_ROUTE,
+        Component: employeeHomePage,
+    }
 ]
 

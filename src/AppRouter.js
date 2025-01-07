@@ -1,6 +1,6 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {Route, Router, Routes, useNavigate} from "react-router-dom";
-import {routes, userRoutes} from "./util/routes";
+import {employeeRoutes, routes, userRoutes} from "./util/routes";
 import {Context} from "./index";
 import {observer} from "mobx-react-lite";
 
@@ -9,18 +9,20 @@ const AppRouter = () => {
     console.log("USER " + UserStore.isUser);
     console.log("AUTH " + UserStore.isAuth);
     console.log("EMPLOYEE " + UserStore.isEmployee);
-    // let userState = UserStore.isAuth;
     return (
         <Routes>
             {
                 !UserStore.isAuth && routes.map(({path, Component}) => (
-                    // console.log("Rendering a component: ", Component)
                     <Route key={path} path={path} element={<Component/>}/>
                 ))
             }
             {
-                UserStore.isAuth && userRoutes.map(({path, Component}) => (
-                    // console.log("Rendering a component: ", Component)
+                UserStore.isUser && userRoutes.map(({path, Component}) => (
+                    <Route key={path} path={path} element={<Component/>}/>
+                ))
+            }
+            {
+                UserStore.isEmployee && employeeRoutes.map(({path, Component}) => (
                     <Route key={path} path={path} element={<Component/>}/>
                 ))
             }
