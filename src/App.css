@@ -1,6 +1,8 @@
 .App {
   text-align: center;
-
+  height: 100vh;
+  width: 100%;
+  background: url("/public/Frame2.png") no-repeat center center fixed;
 }
 
 .App-logo {
@@ -43,6 +45,7 @@
   /*overflow: hidden;*/
   margin: 0;
   padding: 0;
+  background: url("../public/Frame2.png") no-repeat center center fixed;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
@@ -53,6 +56,7 @@
 
 
 body {
+  background: url("../public/Frame2.png") no-repeat center center fixed;
   margin-right: calc(100vw - 100%); /* Adjust margin to compensate for scrollbar width */
 }
 
