@@ -1,0 +1,51 @@
+.popup-information {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    max-width: 600px;
+    margin: 20px auto;
+    margin-bottom: 0;
+}
+
+.customer-image {
+    width: 100px;
+    height: 100px;
+}
+
+.customer-info-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+.customer-info-table thead th {
+    font-size: 18px;
+    text-align: left;
+    padding: 8px 0;
+    border-bottom: 2px solid #ddd;
+}
+
+.customer-info-table tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+.customer-info-table tbody tr td {
+    padding: 8px 0;
+    vertical-align: top;
+    /*font-weight: 500;*/
+    color: #666;
+}
+.field-label {
+    font-weight: bold;
+    color: #000;
+    width: 35%;
+}
+
+.field-value {
+    color: #fff;
+}

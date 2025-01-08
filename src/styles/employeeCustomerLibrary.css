@@ -14,7 +14,7 @@
     width: 848px;
     margin-left: auto;
     margin-right: auto;
-    gap: 30px;
+    gap: 25px;
 }
 
 .content-container-employee {
@@ -40,3 +40,27 @@
     margin-bottom: 15px;
     /*height: 100vh;*/
 }
+.edit-button-cl {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 15px;
+    background-color: #e6e6ff;
+    color: #6f6fff;
+    font-weight: bold;
+    width: 70px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 80%;
+    /*margin-top: 15px;*/
+}
+
+.edit-button:hover {
+    background-color: #d1d1ff;
+    color: #5e5eff;
+}
+
+
+
