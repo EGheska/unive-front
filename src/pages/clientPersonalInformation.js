@@ -15,7 +15,6 @@ const personalInfoDTO = {
 const ClientPersonalInformation = () => {
     return (
         <div className="pageClass-home-payment">
-            <Header/>
             <div className="header-container">
                 <p className="homepage-header-p">My dashboard</p>
                 <p className="homepage-header-sub-p">Welcome, here is an overview for you</p>

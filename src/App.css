@@ -68,4 +68,8 @@ body::-webkit-scrollbar {
   /*box-sizing: border-box;*/
 }
 
+.empty-space-app {
+  height: 70px;
+}
+
 

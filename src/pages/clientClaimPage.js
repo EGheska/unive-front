@@ -19,7 +19,6 @@ const ClientClaimPage = () => {
     };
     return (
         <div className="pageClass-home-claims">
-            <Header/>
             <div className="header-container">
                 <p className="homepage-header-p">My Claims</p>
                 <div className="homepage-header-empty-space"></div>

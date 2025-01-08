@@ -3,6 +3,7 @@ import {Route, Router, Routes, useNavigate} from "react-router-dom";
 import {employeeRoutes, routes, userRoutes} from "./util/routes";
 import {Context} from "./index";
 import {observer} from "mobx-react-lite";
+import Header from "./components/header";
 
 const AppRouter = () => {
     const {UserStore} = useContext(Context);

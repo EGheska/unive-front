@@ -20,7 +20,6 @@ const ClientPolicyPage = () => {
 
     return (
         <div className="pageClass-policy">
-            <Header/>
             <div className="header-container">
                 <p className="homepage-header-p">My Policies</p>
                 <div className="homepage-header-empty-space"></div>

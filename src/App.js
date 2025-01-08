@@ -6,6 +6,7 @@ import {observer} from "mobx-react-lite";
 import {useContext} from "react";
 import {Context} from "./index";
 import AppRouter from "./AppRouter";
+import Header from "./components/header";
 
 
 const App = observer(() => {
@@ -13,6 +14,8 @@ const App = observer(() => {
     console.log(UserStore);
     return (
         <BrowserRouter>
+            <Header></Header>
+            <div className="empty-space-app"></div>
             <AppRouter/>
         </BrowserRouter>
     );

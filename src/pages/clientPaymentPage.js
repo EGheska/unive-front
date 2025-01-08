@@ -19,7 +19,6 @@ const ClientPaymentPage = () => {
     };
     return (
         <div className="pageClass-home-payment">
-            <Header/>
             <div className="header-container">
                 <p className="homepage-header-p">My Payments</p>
                 <div className="homepage-header-empty-space"></div>

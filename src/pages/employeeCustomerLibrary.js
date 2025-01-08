@@ -26,7 +26,7 @@ const EmployeeCustomerLibrary = () => {
     }
     return (
         <div className="pageClass-customerLibrary">
-            <Header/>
+            {/*<Header/>*/}
             <div className="header-container">
                 <p className="homepage-header-p">Customer Library</p>
                 <div className="homepage-header-empty-space"></div>

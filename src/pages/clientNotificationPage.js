@@ -17,7 +17,6 @@ const messages = [
 const ClientNotificationPage = () => {
     return (
         <div className="pageClass-home-notifications">
-            <Header/>
             <div className="header-container">
                 <p className="homepage-header-p">My Notifications</p>
                 <div className="homepage-header-empty-space"></div>

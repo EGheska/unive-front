@@ -24,7 +24,6 @@ const EmployeeHomePage = () => {
 
     return (
         <div className="pageClass-home-employee">
-            <Header/>
             <div className="header-container">
                 <p className="homepage-header-p">My Dashboard</p>
                 <div className="homepage-header-empty-space"></div>
