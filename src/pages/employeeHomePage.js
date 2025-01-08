@@ -18,7 +18,7 @@ const EmployeeHomePage = () => {
     const [selected, setSelected] = useState(null);
 
     const handleRowClick = (tasksDTO) => {
-        setSelected(tasksDTO.name === tasksDTO?.name ? null : tasksDTO);
+        setSelected(tasksDTO.policy === selected?.policy ? null : tasksDTO);
         console.log("selected: ", selected);
     };
 
@@ -33,7 +33,7 @@ const EmployeeHomePage = () => {
                 <Navbar className="nav"/>
                 <div className="content-container-employee">
                     <div className="personal-info-container">
-                        <table className="policy-table">
+                        <table className="employee-task-table">
                             <thead>
                             <tr>
                                 <th>Customer No.</th>
@@ -42,16 +42,16 @@ const EmployeeHomePage = () => {
                             </tr>
                             </thead>
                             <tbody>
-                            {tasksDTO.map((policy, index) => (
+                            {tasksDTO.map((task, index) => (
                                 <tr
                                     key={index}
-                                    onClick={() => handleRowClick(policy)}
-                                    className={policy.policy === selected?.policy ? "selected-row" : ""}
+                                    onClick={() => handleRowClick(task)}
+                                    className={task.policy === selected?.policy ? "selected-row" : ""}
 
                                 >
-                                    <td>{policy.policy}</td>
-                                    <td>{policy.index}</td>
-                                    <td>{policy.date}</td>
+                                    <td>{task.policy}</td>
+                                    <td>{task.index}</td>
+                                    <td>{task.date}</td>
                                 </tr>
                             ))}
                             </tbody>

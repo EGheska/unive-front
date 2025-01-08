@@ -60,13 +60,13 @@ const SignUpForm = () => {
                 >
                     <h1>Sign In</h1>
                     <p>Welcome, please sign in to continue</p>
-                    <input
+                    <input className="sign-in-input"
                         onChange={(e) => setEmail(e.target.value)}
                         type="email"
                         placeholder="Email*"
                         required
                     />
-                    <input
+                    <input className="sign-in-input"
                         onChange={(e) => setPassword(e.target.value)}
                         type="password"
                         placeholder="Password*"
@@ -92,13 +92,13 @@ const SignUpForm = () => {
                 >
                     <h1>Sign Up</h1>
                     <p>Welcome to the registration page</p>
-                    <input type="text" placeholder="First name*" required/>
-                    <input type="text" placeholder="Last name*" required/>
-                    <input type="date" placeholder="Date of birth*" required/>
-                    <input type="email" placeholder="Email*" required/>
-                    <input type="password" placeholder="Password*" required/>
+                    <input type="text" placeholder="First name*" required className="sign-in-input"/>
+                    <input type="text" placeholder="Last name*" required className="sign-in-input"/>
+                    <input type="date" placeholder="Date of birth*" required className="sign-in-input"/>
+                    <input type="email" placeholder="Email*" required className="sign-in-input"/>
+                    <input type="password" placeholder="Password*" required className="sign-in-input"/>
                     <div className="remember">
-                        <input type="checkbox" required/>
+                        <input type="checkbox" required />
                         <label>
                             Accept <a href="#">Terms and Conditions</a>
                         </label>

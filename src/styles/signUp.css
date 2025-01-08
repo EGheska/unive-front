@@ -60,10 +60,7 @@ form p {
     color: #777;
 }
 
-input[type="email"],
-input[type="text"],
-input[type="date"],
-input[type="password"] {
+.sign-in-input {
     width: 100%;
     padding: 12px;
     margin-bottom: 15px;
