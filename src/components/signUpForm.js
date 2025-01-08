@@ -4,6 +4,7 @@ import "../styles/signUp.css"
 import {Context} from "../index";
 import {useNavigate} from "react-router-dom";
 
+
 const SignUpForm = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -30,7 +31,9 @@ const SignUpForm = () => {
         e.preventDefault();
         console.log("Submited");
         if (email.includes("unive")){
+            UserStore.setUser(true);
             UserStore.setEmployee(true);
+            UserStore.setUser(false);
             navigate("/home")
         } else {
             UserStore.setUser(true);
