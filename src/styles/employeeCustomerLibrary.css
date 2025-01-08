@@ -6,3 +6,13 @@
     background: url("../../public/Frame2.png") no-repeat center center fixed;
     background-size: cover;
 }
+
+.main-container-customer-library {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 848px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 30px;
+}
