@@ -22,11 +22,17 @@ class UserStore {
 
     setUser(state){
         this._isUser = state
-        this._isAuth = state
-    }
+        this._isAuth = state || this._isEmployee
+    };
     setEmployee(state){
         this._isEmployee = state;
-        this._isAuth = state;
+        this._isAuth = state || this._isEmployee
+    };
+
+    resetAuth() {
+        this._isUser = false;
+        this._isEmployee = false;
+        this._isAuth = false;
     }
 }
 

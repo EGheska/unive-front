@@ -5,7 +5,7 @@ import './index.css';
 import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-export const Context = createContext(null);
+export const Context = createContext();
 root.render(
   <Context.Provider value={{
       userStore

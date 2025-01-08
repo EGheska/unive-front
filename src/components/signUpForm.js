@@ -12,7 +12,8 @@ const SignUpForm = () => {
     const containerRef = useRef(null);
     const navigate = useNavigate();
 
-    const {UserStore} = useContext(Context);
+    const {userStore} = useContext(Context);
+    console.log("UserStore", userStore);
 
     useEffect(() => {
         if (containerRef.current) {
@@ -31,28 +32,28 @@ const SignUpForm = () => {
         e.preventDefault();
         console.log("Submited");
         if (email.includes("unive")){
-            UserStore.setUser(true);
-            UserStore.setEmployee(true);
-            UserStore.setUser(false);
+            userStore.setUser(true);
+            userStore.setEmployee(true);
+            userStore.setUser(false);
             navigate("/home")
         } else {
-            UserStore.setUser(true);
+            userStore.setUser(true);
             navigate("/")
         }
-        console.log(UserStore.isAuth);
+        console.log(userStore.isAuth);
     };
 
     const handleSignIn = (e) => {
         e.preventDefault();
         console.log("Logged");
         if (email.includes("unive")){
-            UserStore.setEmployee(true);
+            userStore.setEmployee(true);
             navigate("/home")
         } else {
-            UserStore.setUser(true);
+            userStore.setUser(true);
             navigate("/")
         }
-        console.log(UserStore.isAuth);
+        console.log(userStore.isAuth);
     };
 
     return (

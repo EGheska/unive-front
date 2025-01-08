@@ -20,7 +20,7 @@ const AppRouter = () => {
             }
             {/*User Routes*/}
             {
-                userStore.isUser && userRoutes.map(({path, Component}) => (
+                userStore.isUser && userStore.isAuth && userRoutes.map(({path, Component}) => (
                         <Route key={path} path={path} element={
                             <ProtectedRoute>
                                 <Component/>
@@ -30,7 +30,7 @@ const AppRouter = () => {
             }
             {/*Employee routes*/}
             {
-                userStore.isEmployee && employeeRoutes.map(({path, Component}) => (
+                userStore.isEmployee && userStore.isAuth && employeeRoutes.map(({path, Component}) => (
                         <Route key={path} path={path} element={
                             <ProtectedRoute>
                                 <Component/>
