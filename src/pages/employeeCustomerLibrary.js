@@ -12,19 +12,32 @@ const EmployeeCustomerLibrary = () => {
     }
     return (
         <div className="pageClass-customerLibrary">
-            <Header />
+            <Header/>
             <div className="header-container">
                 <p className="homepage-header-p">Customer Library</p>
                 <div className="homepage-header-empty-space"></div>
             </div>
             <div className="main-container-customer-library">
                 <Navbar className="nav"/>
-                <CustomerSearchComponent onCustomerSelected={handleCustomerSelection}/>
-                {isCustomerSelected && (
-                    <div>
-                        asdf
-                    </div>
-                )}
+                <div className="content-container-employee">
+                    <CustomerSearchComponent onCustomerSelected={handleCustomerSelection}/>
+                    {isCustomerSelected && (
+                        <div className="popup-container">
+                            <div className="popup-information">
+                                <img src="a" alt={"Client"}/>
+                                <table>
+
+                                </table>
+                            </div>
+                            <button>
+                                Edit <span></span>
+                            </button>
+                            <div className="popup-detailed-information">
+
+                            </div>
+                        </div>
+                    )}
+                </div>
             </div>
         </div>
     )
