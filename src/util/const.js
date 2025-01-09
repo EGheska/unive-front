@@ -9,3 +9,7 @@ export const PERSONAL_ROUTE = '/personal-info'
 export const EMPLOYEE_HOME_ROUTE = '/home'
 export const EMPLOYEE_CUSTOMER_LIBRARY_ROUTE = '/customer'
 export const EMPLOYEE_NEW_CUSTOMER = '/new-customer'
+
+export const EMPLOYEE_HOME_CLAIMS = '/home/claims'
+export const EMPLOYEE_HOME_PAYMENTS = '/home/payments'
+export const EMPLOYEE_HOME_NOTIFICATIONS = '/home/notifications'

@@ -2,6 +2,7 @@
     width: 160px !important;
     box-sizing: border-box;
     flex: 0 0 160px;
+    /*position: fixed;*/
     /*margin-right: 15px;*/
 }
 

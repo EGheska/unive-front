@@ -4,6 +4,7 @@ import Header from "../components/header";
 import CustomerSearchComponent from "../components/customerSearchComponent";
 import "../styles/employeeCustomerLibrary.css"
 import CustomerInformationComponent from "../components/customerInformationComponent";
+import CustomerPoliciesForm from "../components/customerPoliciesForm";
 
 
 const personalInfoDTO = {
@@ -16,6 +17,15 @@ const personalInfoDTO = {
     email: "unknown@who.knows.email",
     phoneNumber: "+12 3 45 67 89 00",
 }
+
+const dataObj = [
+    {type: "policy", number: "YP65038241", status: "Ongoing", date: "10/31/2025"},
+    {type: "policy", number: "XP93028476", status: "Expired", date: "10/31/2024"},
+    {type: "claim", number: "YP65038241", status: "Solved"},
+    {type: "claim", number: "XP93028476", status: "Ongoing"},
+    {type: "payment", number: "YP65038241", status: "Paid", date: "09/15/2024"},
+    {type: "payment", number: "XP93028476", status: "Not Paid", date: "10/31/2025"}
+]
 
 
 const EmployeeCustomerLibrary = () => {
@@ -37,7 +47,7 @@ const EmployeeCustomerLibrary = () => {
                     <CustomerSearchComponent onCustomerSelected={handleCustomerSelection}/>
                     {isCustomerSelected && (
                         <div className="popup-container">
-                           <CustomerInformationComponent personalInfoDTO={personalInfoDTO}/>
+                            <CustomerInformationComponent personalInfoDTO={personalInfoDTO}/>
                             <button className="edit-button-cl">
                                 Edit <span></span>
                             </button>
@@ -55,12 +65,13 @@ const EmployeeCustomerLibrary = () => {
                                     Donec nisi dui, lobortis et dictum sed, consectetur vehicula elit. Quisque dictum neque ut lorem iaculis, id viverra orci ultrices. Nulla facilisi. Etiam.
                                 </span>
                             </div>
+                            <CustomerPoliciesForm dataObject={dataObj}/>
                         </div>
                     )}
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default EmployeeCustomerLibrary;

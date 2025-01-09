@@ -58,6 +58,17 @@ export const employeeRoutes = [
     {
         path: Routes.EMPLOYEE_NEW_CUSTOMER,
         Component: EmployeeNewCustomer,
+    },{
+        path: Routes.EMPLOYEE_HOME_CLAIMS,
+        Component: EmployeeNewCustomer,
+    },
+    {
+        path: Routes.EMPLOYEE_HOME_NOTIFICATIONS,
+        Component: EmployeeNewCustomer,
+    },
+    {
+        path: Routes.EMPLOYEE_HOME_PAYMENTS,
+        Component: EmployeeNewCustomer,
     }
 ]
 
