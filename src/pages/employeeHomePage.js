@@ -22,7 +22,7 @@ const EmployeeHomePage = () => {
 
     useEffect(() => {
         if (selected) {
-            navigate(selected.type);
+            navigate(selected.type + `/${selected.index}`);
         }
     }, [selected])
 

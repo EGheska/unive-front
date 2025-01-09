@@ -21,10 +21,10 @@ const personalInfoDTO = {
 const dataObj = [
     {type: "policy", number: "YP65038241", status: "Ongoing", date: "10/31/2025"},
     {type: "policy", number: "XP93028476", status: "Expired", date: "10/31/2024"},
-    {type: "claim", number: "YP65038241", status: "Solved"},
-    {type: "claim", number: "XP93028476", status: "Ongoing"},
-    {type: "payment", number: "YP65038241", status: "Paid", date: "09/15/2024"},
-    {type: "payment", number: "XP93028476", status: "Not Paid", date: "10/31/2025"}
+    {type: "claims", number: "YP65038241", status: "Solved"},
+    {type: "claims", number: "XP93028476", status: "Ongoing"},
+    {type: "payments", number: "YP65038241", status: "Paid", date: "09/15/2024"},
+    {type: "payments", number: "XP93028476", status: "Not Paid", date: "10/31/2025"}
 ]
 
 

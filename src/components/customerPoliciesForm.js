@@ -16,8 +16,8 @@ const CustomerPoliciesForm = ({dataObject}) => {
 
     const handleClick = (type, number) => {
         navigate(`/home/${type}/${number}`);
-        console.log("type: ", type);
-        console.log("number: ", number);
+        // console.log("type: ", type);
+        // console.log("number: ", number);
     }
 
     return (
