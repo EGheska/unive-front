@@ -1,15 +1,24 @@
 import React from 'react'
 import "../styles/customerPoliciesForm.css"
+import {useNavigate} from "react-router-dom";
 
 
 
 const CustomerPoliciesForm = ({dataObject}) => {
+
+    const navigate = useNavigate();
 
     const groupedData = dataObject.reduce((acc, item) => {
         acc[item.type] = acc[item.type] || [];
         acc[item.type].push(item);
         return acc;
     }, {});
+
+    const handleClick = (type, number) => {
+        navigate(`/home/${type}/${number}`);
+        console.log("type: ", type);
+        console.log("number: ", number);
+    }
 
     return (
         <div className="customer-form-container">
@@ -28,7 +37,10 @@ const CustomerPoliciesForm = ({dataObject}) => {
                         </thead>
                         <tbody>
                         {items.map((item, index) => (
-                            <tr key={index}>
+                            <tr
+                                key={index}
+                                onClick={() => handleClick(type, item.number)}
+                            >
                                 {Object.values(item).map((value, idx) => (
                                     <td key={idx}>{value}</td>
                                 ))}

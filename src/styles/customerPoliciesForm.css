@@ -3,6 +3,7 @@
     /*background-color: #e0e0e0; !* Gray background *!*/
     padding: 20px;
     border-radius: 8px;
+    margin-bottom: 20%;
 }
 
 table {
@@ -53,6 +54,7 @@ h3 {
     text-align: center;
     display: flex;
     justify-content: center;
+    justify-self: center;
     align-items: center;
 }
 
