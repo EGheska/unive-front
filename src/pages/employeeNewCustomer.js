@@ -10,6 +10,7 @@ const EmployeeNewCustomer = () => {
         last_name: "",
         infix: "",
         date: "",
+        address: "",
         email: "",
         phone: "",
     });
@@ -51,31 +52,31 @@ const EmployeeNewCustomer = () => {
                         <div className="customer-info-fields">
                             <div className="form-row">
                                 <label htmlFor="first-name">First name</label>
-                                <input type="text" onChange={handleChange} required id="first-name"/>
+                                <input type="text" onChange={handleChange} name="first_name" value={formData.first_name} required id="first-name"/>
                             </div>
                             <div className="form-row">
                                 <label htmlFor="infix">Infix</label>
-                                <input type="text" onChange={handleChange} required id="infix"/>
+                                <input type="text" onChange={handleChange} name="infix" value={formData.infix} required id="infix"/>
                             </div>
                             <div className="form-row">
                                 <label htmlFor="surname">Surname</label>
-                                <input type="text"  onChange={handleChange}required id="surname"/>
+                                <input type="text"  onChange={handleChange} name="last_name" value={formData.last_name} required id="surname"/>
                             </div>
                             <div className="form-row">
                                 <label htmlFor="dob">Date of birth</label>
-                                <input type="date"  onChange={handleChange} required id="dob"/>
+                                <input type="date"  onChange={handleChange} name="date" value={formData.date} required id="dob"/>
                             </div>
                             <div className="form-row">
                                 <label htmlFor="address">Address</label>
-                                <input type="text"  onChange={handleChange} required id="address"/>
+                                <input type="text" name="address" value={formData.address} onChange={handleChange} required id="address"/>
                             </div>
                             <div className="form-row">
                                 <label htmlFor="email">Email</label>
-                                <input type="email" onChange={handleChange} required id="email"/>
+                                <input type="email" name="email" value={formData.email} onChange={handleChange} required id="email"/>
                             </div>
                             <div className="form-row">
                                 <label htmlFor="telephone">Telephone number</label>
-                                <input type="tel" onChange={handleChange} required id="telephone"/>
+                                <input type="tel" onChange={handleChange} name="phone" value={formData.phone} required id="telephone"/>
                             </div>
                             <button type="button" id="new-customer" disabled={!isValid} onClick={handleNextButtonClick} className="view-button">Next →</button>
                         </div>
