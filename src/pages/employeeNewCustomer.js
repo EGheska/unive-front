@@ -17,8 +17,8 @@ const EmployeeNewCustomer = () => {
     const isValid = formData.first_name && formData.last_name && formData.infix && formData.date && formData.date.length > 0;
 
     const handleChange = (e) => {
-        const { first_name, last_name, infix, date, phone, email } = e.target;
-        setFormData({...formData, [first_name]: e.target.value, [last_name]: e.target.value, [infix]: e.target.value, [date]: e.target.value, [phone]: phone, [email]: email });
+        const { name, value } = e.target;
+        setFormData((prev) => ({ ...prev, [name]: value }));
     }
 
 
