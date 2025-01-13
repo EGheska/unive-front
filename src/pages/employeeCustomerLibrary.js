@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import Navbar from "../components/navbar";
-import Header from "../components/header";
 import CustomerSearchComponent from "../components/customerSearchComponent";
 import "../styles/employeeCustomerLibrary.css"
 import CustomerInformationComponent from "../components/customerInformationComponent";

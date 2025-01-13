@@ -7,6 +7,7 @@ import {useContext} from "react";
 import {Context} from "./index";
 import AppRouter from "./AppRouter";
 import Header from "./components/header";
+import Navbar from "./components/navbar";
 
 
 const App = observer(() => {
