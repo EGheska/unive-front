@@ -11,6 +11,7 @@ import employeeHomePage from "../pages/employeeHomePage";
 import {Route} from "react-router-dom";
 import EmployeeCustomerLibrary from "../pages/employeeCustomerLibrary";
 import EmployeeNewCustomer from "../pages/employeeNewCustomer";
+import EmployeeNewPolicy from "../pages/employeeNewPolicy";
 
 export const routes = [
     {
@@ -69,6 +70,10 @@ export const employeeRoutes = [
     {
         path: Routes.EMPLOYEE_HOME_PAYMENTS,
         Component: EmployeeNewCustomer,
+    },
+    {
+        path: Routes.EMPLOYEE_NEW_CUSTOMER_POLICY_SELECT,
+        Component: EmployeeNewPolicy,
     }
 ]
 
