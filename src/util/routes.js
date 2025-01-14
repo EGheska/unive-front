@@ -1,5 +1,4 @@
 import * as Routes from "./const";
-
 import SignPage from "../pages/signPage.js"
 import HomePage from "../pages/HomePage";
 import ClientNotificationPage from "../pages/clientNotificationPage";
@@ -8,10 +7,10 @@ import ClientClaimPage from "../pages/clientClaimPage";
 import clientPaymentPage from "../pages/clientPaymentPage";
 import ClientPersonalInformation from "../pages/clientPersonalInformation";
 import employeeHomePage from "../pages/employeeHomePage";
-import {Route} from "react-router-dom";
 import EmployeeCustomerLibrary from "../pages/employeeCustomerLibrary";
 import EmployeeNewCustomer from "../pages/employeeNewCustomer";
 import EmployeeNewPolicy from "../pages/employeeNewPolicy";
+import EmployeeNewCustomerValidation from "../pages/employeeNewCustomerValidation";
 
 export const routes = [
     {
@@ -74,6 +73,10 @@ export const employeeRoutes = [
     {
         path: Routes.EMPLOYEE_NEW_CUSTOMER_POLICY_SELECT,
         Component: EmployeeNewPolicy,
+    },
+    {
+        path: Routes.EMPLOYEE_NEW_CUSTOMER_VALIDATION,
+        Component: EmployeeNewCustomerValidation,
     }
 ]
 

@@ -10,6 +10,7 @@ export const EMPLOYEE_HOME_ROUTE = '/home'
 export const EMPLOYEE_CUSTOMER_LIBRARY_ROUTE = '/customer'
 export const EMPLOYEE_NEW_CUSTOMER = '/new-customer'
 export const EMPLOYEE_NEW_CUSTOMER_POLICY_SELECT = '/new-customer/policy-select'
+export const EMPLOYEE_NEW_CUSTOMER_VALIDATION = '/new-customer/validation'
 
 export const EMPLOYEE_HOME_CLAIMS = '/home/claims'
 export const EMPLOYEE_HOME_PAYMENTS = '/home/payments'
