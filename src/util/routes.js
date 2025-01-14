@@ -12,6 +12,10 @@ import EmployeeNewCustomer from "../pages/employeeNewCustomer";
 import EmployeeNewPolicy from "../pages/employeeNewPolicy";
 import EmployeeNewCustomerValidation from "../pages/employeeNewCustomerValidation";
 import EmployeeApprove from "../pages/employeeApprove";
+import employeeHomeClaims from "../pages/employeeHomeClaims";
+import EmployeeHomePayments from "../pages/employeeHomePayments";
+import employeeNewPolicy from "../pages/employeeNewPolicy";
+import employeeHomePolicy from "../pages/employeeHomePolicy";
 
 export const routes = [
     {
@@ -61,7 +65,11 @@ export const employeeRoutes = [
         Component: EmployeeNewCustomer,
     },{
         path: Routes.EMPLOYEE_HOME_CLAIMS,
-        Component: EmployeeNewCustomer,
+        Component: employeeHomeClaims,
+    },
+    {
+      path: Routes.EMPLOYEE_HOME_POLICY,
+        Component: employeeHomePolicy,
     },
     {
         path: Routes.EMPLOYEE_HOME_NOTIFICATIONS,
@@ -69,7 +77,7 @@ export const employeeRoutes = [
     },
     {
         path: Routes.EMPLOYEE_HOME_PAYMENTS,
-        Component: EmployeeNewCustomer,
+        Component: EmployeeHomePayments,
     },
     {
         path: Routes.EMPLOYEE_NEW_CUSTOMER_POLICY_SELECT,
