@@ -1,0 +1,95 @@
+.customer-claims-container-main {
+    font-family: Arial, sans-serif;
+    width: 100%;
+    /*margin: 20px;*/
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /*border: 1px solid #ccc;*/
+    border-radius: 10px;
+    background-color: #ffff;
+}
+
+.customer-claims {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.claim-text {
+    text-align: justify;
+}
+
+.customer-claims h1 {
+    font-size: 1.5rem;
+}
+
+.claim-number {
+    font-size: 1rem;
+    color: gray;
+}
+
+.customer-claims-description {
+    margin-top: 20px;
+}
+
+.payment-detailed-container-home-claim {
+    display: flex;
+    flex-direction: row;
+    /*flex-direction: row;*/
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 30px;
+    width: 622px;
+    min-height: 182px;
+    background: #fff;
+    margin-left: 25px;
+    margin-right: 0;
+    border-radius: 10px;
+    /*box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);*/
+    padding: 20px;
+}
+
+.view-docs-btn {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #a5a1f7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.claim-table {
+    flex-direction: row;
+}
+
+.pdf-preview {
+    margin-top: 20px;
+}
+
+.pdf-thumbnail {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
+
+.customer-claims-attached {
+    margin-top: 20px;
+}
+
+.attached-docs {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.doc-placeholder {
+    width: 100px;
+    height: 100px;
+    background-color: #e0e0e0;
+    border: 1px dashed #ccc;
+    border-radius: 5px;
+}
+
+.view-attached-button {
+    width: 200px;
+    font-size: 14px;
+}
