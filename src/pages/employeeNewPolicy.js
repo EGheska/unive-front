@@ -52,11 +52,8 @@ const policies = [
 const EmployeeNewPolicy = () => {
     const navigate = useNavigate();
     const [selectedPolicies, setSelectedPolicies] = useState([]);
-    const handleButtonClick = () => {
-        navigate("/new-customer/validation");
-    }
     const handleSubmitClick = () => {
-        navigate("/approve");
+        navigate("/new-customer/validation");
     }
     const handleCheckboxChange = (policyId) => {
         setSelectedPolicies((prevSelected) =>
@@ -80,12 +77,12 @@ const EmployeeNewPolicy = () => {
                             <h2>Enter a additional information</h2>
                             <TextAreaComponent placeholder="Enter description of the situation"/>
                         </div>
-                        <button
-                            className="next-button"
-                            onClick={handleButtonClick}
-                        >
-                            Next
-                        </button>
+                        {/*<button*/}
+                        {/*    className="next-button"*/}
+                        {/*    onClick={handleButtonClick}*/}
+                        {/*>*/}
+                        {/*    Next*/}
+                        {/*</button>*/}
                     </div>
                     <div className="customer-additional-info-container">
                         <div className="policies-list">

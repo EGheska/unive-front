@@ -11,6 +11,7 @@ import EmployeeCustomerLibrary from "../pages/employeeCustomerLibrary";
 import EmployeeNewCustomer from "../pages/employeeNewCustomer";
 import EmployeeNewPolicy from "../pages/employeeNewPolicy";
 import EmployeeNewCustomerValidation from "../pages/employeeNewCustomerValidation";
+import EmployeeApprove from "../pages/employeeApprove";
 
 export const routes = [
     {
@@ -77,6 +78,10 @@ export const employeeRoutes = [
     {
         path: Routes.EMPLOYEE_NEW_CUSTOMER_VALIDATION,
         Component: EmployeeNewCustomerValidation,
+    },
+    {
+        path: Routes.EMPLOYEE_NEW_CUSTOMER_APPROVE,
+        Component: EmployeeApprove,
     }
 ]
 
