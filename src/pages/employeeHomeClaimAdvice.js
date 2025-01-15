@@ -1,8 +1,14 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Navbar from "../components/navbar";
 import "../styles/employeeHomeClaimAdivce.css"
+import Popup from "../components/Popup";
 
 const EmployeeHomeClaimAdvice = () => {
+    const [isPopupOpen, setPopupOpen] = useState(false);
+
+    const handleOpenPopup = () => setPopupOpen(true);
+    const handleClosePopup = () => setPopupOpen(false);
+
     return (
         <div className="pageClass-home-employee">
             <div className="header-container">
@@ -58,9 +64,25 @@ const EmployeeHomeClaimAdvice = () => {
                     </div>
                     <div className="controls">
                         <button className='view-attached-button'>Approve</button>
-                        <button className="view-attached-button">Update the status</button>
+                        <button className="view-attached-button" onClick={handleOpenPopup}>Update the status</button>
                         <button className="view-attached-button">Deny</button>
                     </div>
+                    <Popup isOpen={isPopupOpen} onClose={handleClosePopup} title="Update the status">
+                        <p>Select the status of a claim</p>
+                        <label className="popup-labels">
+                            <input type="checkbox"/>
+                            Approved
+                        </label>
+                        <label className="popup-labels">
+                            <input type="checkbox"/>
+                            On hold/in progress
+                        </label>
+                        <label className="popup-labels">
+                            <input type="checkbox"/>
+                            Deny
+                        </label>
+                        <button className="popup-button" onClick={handleClosePopup}>Save</button>
+                    </Popup>
                 </div>
             </div>
         </div>

@@ -35,3 +35,16 @@
     flex-direction: row;
     gap: 20px;
 }
+
+.popup-labels {
+    display: flex;
+    flex-direction: row;
+    /*margin-bottom: 5px;*/
+}
+
+.popup-button {
+    /*display: flex;*/
+    /*align-items: center;*/
+    margin-top: 20px;
+
+}
