@@ -1,11 +1,16 @@
 import React, {useState} from "react";
 import Navbar from "../components/navbar";
 import "../styles/employeeHomeClaims.css"
+import {useNavigate} from "react-router-dom";
 
 const EmployeeHomeClaims = () => {
+    const navigate = useNavigate();
     const [isAttached, setAttached] = useState(false);
     const handleAttachedClick = () => {
         setAttached(!isAttached);
+    }
+    const handleNextButtonClick = () => {
+        navigate("/home/claims/:claimId/claim-advice");
     }
 
     return (
@@ -70,6 +75,7 @@ const EmployeeHomeClaims = () => {
                     <button className="view-attached-button" onClick={handleAttachedClick}>
                         View attached documents
                     </button>
+                    <button className="view-attached-button-next" onClick={handleNextButtonClick}>Next page</button>
                     {/*/!* Attached Documents *!/*/}
                     {isAttached && (
                         <div className="customer-claims-attached">
