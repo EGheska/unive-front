@@ -17,6 +17,7 @@ import EmployeeHomePayments from "../pages/employeeHomePayments";
 import employeeNewPolicy from "../pages/employeeNewPolicy";
 import employeeHomePolicy from "../pages/employeeHomePolicy";
 import EmployeeHomeClaimAdvice from "../pages/employeeHomeClaimAdvice";
+import EmployeeHomeMessages from "../pages/employeeHomeMessages";
 
 export const routes = [
     {
@@ -74,7 +75,7 @@ export const employeeRoutes = [
     },
     {
         path: Routes.EMPLOYEE_HOME_NOTIFICATIONS,
-        Component: EmployeeNewCustomer,
+        Component: EmployeeHomeMessages,
     },
     {
         path: Routes.EMPLOYEE_HOME_PAYMENTS,
