@@ -13,7 +13,7 @@
 }
 
 /* Popup container */
-.popup-container {
+.popup-container-component {
     background: #fff;
     border-radius: 10px;
     max-width: 500px;

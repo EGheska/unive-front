@@ -6,7 +6,7 @@ const Popup = ({ isOpen, onClose, title, children }) => {
 
     return (
         <div className="popup-overlay" onClick={onClose}>
-            <div className="popup-container" onClick={(e) => e.stopPropagation()}>
+            <div className="popup-container-component" onClick={(e) => e.stopPropagation()}>
                 <div className="popup-header">
                     <h2>{title}</h2>
                     <button className="popup-close-btn" onClick={onClose}>
