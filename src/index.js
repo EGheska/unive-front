@@ -1,14 +1,14 @@
 import React, {createContext} from 'react';
-import UserStore from './store/user_store.js';
+import userStore from './store/user_store.js';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-export const Context = createContext(null);
+export const Context = createContext();
 root.render(
   <Context.Provider value={{
-      UserStore: new UserStore()
+      userStore
   }}>
       <App/>
   </Context.Provider>

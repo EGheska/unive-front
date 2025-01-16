@@ -4,10 +4,16 @@ import "../styles/signUp.css"
 import {Context} from "../index";
 import {useNavigate} from "react-router-dom";
 
+
 const SignUpForm = () => {
-    const {UserStore} = useContext(Context);
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [isSignUp, setIsSignUp] = useState(false);
     const containerRef = useRef(null);
     const navigate = useNavigate();
+
+    const {userStore} = useContext(Context);
+    console.log("UserStore", userStore);
     const [loginData, setLoginData] = useState({
         email: "",
         password: "",
@@ -34,7 +40,7 @@ const SignUpForm = () => {
     const handleSignUp = (e) => {
         e.preventDefault();
         console.log("Submited");
-        if (loginData.email.includes("unive")) {
+        if (email.includes("unive")){
             UserStore.setEmployee(true);
             navigate("/home")
         } else {
@@ -47,7 +53,7 @@ const SignUpForm = () => {
     const handleSignIn = (e) => {
         e.preventDefault();
         console.log("Logged");
-        if (loginData.email.includes("unive")) {
+        if (email.includes("unive")){
             UserStore.setEmployee(true);
             navigate("/home")
         } else {
@@ -55,12 +61,6 @@ const SignUpForm = () => {
             navigate("/")
         }
         console.log(UserStore.isAuth);
-    };
-
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setLoginData((prev) => ({ ...prev, [name]: value }));
-        console.log("Updated loginData: ", loginData);
     };
 
     return (
@@ -71,27 +71,23 @@ const SignUpForm = () => {
                 >
                     <h1>Sign In</h1>
                     <p>Welcome, please sign in to continue</p>
-                    <input className="sign-in-input"
-                           name="email"
-                           onChange={handleChange}
-                           value={loginData.email}
-                           type="email"
-                           placeholder="Email*"
-                           required
+                    <input
+                        onChange={(e) => setEmail(e.target.value)}
+                        type="email"
+                        placeholder="Email*"
+                        required
                     />
-                    <input className="sign-in-input"
-                           name="password"
-                           onChange={handleChange}
-                           type="password"
-                           value={loginData.password}
-                           placeholder="Password*"
-                           required
+                    <input
+                        onChange={(e) => setPassword(e.target.value)}
+                        type="password"
+                        placeholder="Password*"
+                        required
                     />
                     <div className="remember">
                         <input type="checkbox"/>
                         <label>Remember me</label>
                     </div>
-                    <button type="submit" disabled={!isValid} onClick={handleSignIn}>Sign In</button>
+                    <button type="submit" onClick={handleSignIn}>Sign In</button>
                     <footer>
                         <p>
                             Don’t have an account?{" "}
@@ -107,20 +103,18 @@ const SignUpForm = () => {
                 >
                     <h1>Sign Up</h1>
                     <p>Welcome to the registration page</p>
-                    <input type="text" placeholder="First name*" required className="sign-in-input"/>
-                    <input type="text" placeholder="Last name*" required className="sign-in-input"/>
-                    <input type="date" placeholder="Date of birth*" required className="sign-in-input"/>
-                    <input type="email" name="email" value={loginData.email} placeholder="Email*" onChange={handleChange} required
-                           className="sign-in-input"/>
-                    <input type="password" name="password" value={loginData.password} placeholder="Password*" onChange={handleChange} required
-                           className="sign-in-input"/>
+                    <input type="text" placeholder="First name*" required/>
+                    <input type="text" placeholder="Last name*" required/>
+                    <input type="date" placeholder="Date of birth*" required/>
+                    <input type="email" placeholder="Email*" required/>
+                    <input type="password" placeholder="Password*" required/>
                     <div className="remember">
                         <input type="checkbox" required/>
                         <label>
                             Accept <a href="#">Terms and Conditions</a>
                         </label>
                     </div>
-                    <button type="submit" onClick={handleSignUp} disabled={!isValid}>Sign Up</button>
+                    <button type="submit" onClick={handleSignUp}>Sign Up</button>
                     <footer>
                         <p>
                             Already have one?{" "}

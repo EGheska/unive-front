@@ -1,12 +1,14 @@
 import {makeAutoObservable} from 'mobx';
 
 class UserStore {
+
     constructor() {
         this._isAuth = true;
         this._isUser = false
         this._isEmployee = true;
         makeAutoObservable(this)
     }
+
 
     get isAuth(){
         return this._isAuth;
@@ -20,12 +22,19 @@ class UserStore {
 
     setUser(state){
         this._isUser = state
-        this._isAuth = state
-    }
+        this._isAuth = state || this._isEmployee
+    };
     setEmployee(state){
         this._isEmployee = state;
-        this._isAuth = state;
+        this._isAuth = state || this._isEmployee
+    };
+
+    resetAuth() {
+        this._isUser = false;
+        this._isEmployee = false;
+        this._isAuth = false;
     }
 }
 
-export default UserStore;
+const userStore = new UserStore();
+export default userStore;

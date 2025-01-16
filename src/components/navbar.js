@@ -1,11 +1,10 @@
 import React, {useContext, useEffect, useState} from 'react';
 import '../styles/navbar.css';
 import {NavLink, useLocation} from "react-router-dom";
-import UserStore from "../store/user_store";
 import {Context} from "../index";
 
 const Navbar = () => {
-    const {UserStore} = useContext(Context);
+    const {userStore} = useContext(Context);
     const [isUser, setIsUser] = useState(null);
     const location = useLocation();
 
@@ -36,9 +35,9 @@ const Navbar = () => {
     ]
 
     useEffect(() => {
-        if (UserStore.isUser) {
+        if (userStore.isUser) {
             setIsUser(true)
-        } else if (UserStore.isEmployee) {
+        } else if (userStore.isEmployee) {
             setIsUser(false)
         }
     }, [isUser]);
