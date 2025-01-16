@@ -8,6 +8,7 @@ import {useNavigate} from "react-router-dom";
 const SignUpForm = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [isValid, setIsValid] = useState(false);
     const [isSignUp, setIsSignUp] = useState(false);
     const containerRef = useRef(null);
     const navigate = useNavigate();
@@ -19,9 +20,12 @@ const SignUpForm = () => {
         password: "",
     })
     const isChecked = false;
-    // const [email, setEmail] = useState("");
-    const [isSignUp, setIsSignUp] = useState(false);
-    const isValid = loginData.email && loginData.password.length > 0;
+    // // const [email, setEmail] = useState("");
+    // const isValid = loginData.email && loginData.password.length > 0;
+
+    useEffect(() => {
+        setIsValid(email.trim() !== "" && password.trim() !== "");
+    }, [password, email])
 
     useEffect(() => {
         console.log(isChecked)
@@ -41,26 +45,26 @@ const SignUpForm = () => {
         e.preventDefault();
         console.log("Submited");
         if (email.includes("unive")){
-            UserStore.setEmployee(true);
+            userStore.setEmployee(true);
             navigate("/home")
         } else {
-            UserStore.setUser(true);
+            userStore.setUser(true);
             navigate("/")
         }
-        console.log(UserStore.isAuth);
+        console.log(userStore.isAuth);
     };
 
     const handleSignIn = (e) => {
         e.preventDefault();
         console.log("Logged");
         if (email.includes("unive")){
-            UserStore.setEmployee(true);
+            userStore.setEmployee(true);
             navigate("/home")
         } else {
-            UserStore.setUser(true);
+            userStore.setUser(true);
             navigate("/")
         }
-        console.log(UserStore.isAuth);
+        console.log(userStore.isAuth);
     };
 
     return (
@@ -87,7 +91,7 @@ const SignUpForm = () => {
                         <input type="checkbox"/>
                         <label>Remember me</label>
                     </div>
-                    <button type="submit" onClick={handleSignIn}>Sign In</button>
+                    <button type="submit" disabled={!isValid} onClick={handleSignIn}>Sign In</button>
                     <footer>
                         <p>
                             Don’t have an account?{" "}
@@ -114,7 +118,7 @@ const SignUpForm = () => {
                             Accept <a href="#">Terms and Conditions</a>
                         </label>
                     </div>
-                    <button type="submit" onClick={handleSignUp}>Sign Up</button>
+                    <button type="submit" onClick={handleSignUp} disabled={!isValid}>Sign Up</button>
                     <footer>
                         <p>
                             Already have one?{" "}
