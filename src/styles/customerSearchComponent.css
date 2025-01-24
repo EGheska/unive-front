@@ -38,6 +38,12 @@
     font-size: 14px;
 }
 
+#customer-library {
+    /*height: 25px;*/
+    margin-bottom: 0;
+    background-color: white;
+}
+
 .search-input input {
     border: none;
     outline: none;

@@ -35,10 +35,11 @@ const CustomerSearchComponent = ({onCustomerSelected}) => {
             <div className="search-container-inner">
                 <div className="search-input">
                     <input
-                     type="text"
-                     className="input-search-prompt"
-                     placeholder="search by name, phone number, customer number"
-                     onChange={handleInputChange}
+                        id="customer-library"
+                        type="text"
+                        className="input-search-prompt"
+                        placeholder="search by name, phone number, customer number"
+                        onChange={handleInputChange}
                     />
                     <img src="/input_icon.png" alt="Search" className="input_icon"
 
@@ -46,7 +47,7 @@ const CustomerSearchComponent = ({onCustomerSelected}) => {
                 </div>
                 {isSelected && (
                     <div className="search-popup">
-                        <img src="profile-pic-url" alt="Customer"/>
+                        <img src="/me.png" alt="Customer"/>
                         <div className="info">
                             <div><span className="label">First Name:</span> Dima</div>
                             <div><span className="label">Surname:</span> Taras</div>

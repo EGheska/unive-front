@@ -5,7 +5,7 @@ import "../styles/customerInformationComponent.css"
 const CustomerInformationComponent = ({personalInfoDTO}) => {
     return (
         <div className="popup-information">
-            <img src="a" alt={"Client"} className="customer-image"/>
+            <img src="/me.png" alt={"Client"} className="customer-image"/>
             <table className="customer-info-table">
                 <thead>
                 <tr>
