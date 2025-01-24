@@ -40,7 +40,6 @@ const EmployeeNewCustomer = () => {
                     <div className="customer-info-left">
                         <div className="customer-photo-placeholder">
                             {/* Placeholder for customer photo */}
-                            photo
                         </div>
                     </div>
                     <div className="customer-info-right">

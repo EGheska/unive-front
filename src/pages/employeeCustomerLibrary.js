@@ -55,7 +55,7 @@ const EmployeeCustomerLibrary = () => {
                                     Detailed information
                                 </span>
                                 <span className="detailed-information-container">
-                                    The detailed infromation about the customer will be displayed here. This infomration includes the type of business etc
+                                    The detailed information about the customer will be displayed here. This information includes the type of business etc
                                 </span>
                             </div>
                             <CustomerPoliciesForm dataObject={dataObj}/>

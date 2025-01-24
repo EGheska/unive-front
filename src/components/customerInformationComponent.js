@@ -1,13 +1,32 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "../styles/customerInformationComponent.css"
 
 
 const CustomerInformationComponent = ({personalInfoDTO}) => {
+    const [isValidation, setIsValidation] = React.useState(false);
+
+
+    useEffect(() => {
+        if (window.location.pathname === "/new-customer/validation") {
+            setIsValidation(false);
+            console.log(isValidation + "CustomerInformationComponent");
+        } else {
+            setIsValidation(true);
+            console.log(isValidation + "CustomerInformationComponent");
+        }
+    }, [isValidation]);
+
+
     return (
         <div className="popup-information">
-            <img src="/me.png" alt={"Client"} className="customer-image"/>
+            {isValidation ? (
+                <img src="/me.png" alt={"Client"} className="customer-image"/>
+            ): (
+                <img alt={"Client"} className="customer-image"/>
+            )}
+
             <table className="customer-info-table">
-                <thead>
+            <thead>
                 <tr>
                     <th>Customer Information</th>
                 </tr>
