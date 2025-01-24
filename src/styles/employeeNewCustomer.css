@@ -60,7 +60,7 @@
 .customer-info-fields {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    /*gap: 1px;*/
 }
 
 .form-row {
@@ -84,4 +84,5 @@
 #new-customer {
     display: flex;
     align-self: flex-end;
+    margin-top: 20px;
 }

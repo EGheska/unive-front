@@ -2,6 +2,7 @@ import React from 'react';
 import '../styles/homepage.css';
 import Navbar from "../components/navbar";
 import Header from "../components/header";
+import {useNavigate} from "react-router-dom";
 
 
 const personalInfoDTO = {
@@ -20,7 +21,22 @@ const notificationsDTO = [
 ];
 
 
+
 const HomePage = () => {
+    const navigate = useNavigate();
+    const handleButtonClick = () => {
+        navigate('/notifications')
+    }
+    const handlePolicyClick = () => {
+        navigate('/policies')
+    }
+    const handleClaimsClick = () => {
+        navigate('/claims')
+    }
+    const handlePaymentClick = () => {
+        navigate('/payment')
+    }
+
     return (
         <div className="pageClass-home">
             <div className="header-container">
@@ -102,7 +118,7 @@ const HomePage = () => {
                             ))}
                             </tbody>
                         </table>
-                        <button className="goto-button">
+                        <button className="goto-button" onClick={handleButtonClick}>
                             All Notifications <span>→</span>
                         </button>
                     </div>
@@ -126,7 +142,7 @@ const HomePage = () => {
                             ))}
                             </tbody>
                         </table>
-                        <button className="goto-button">
+                        <button className="goto-button" onClick={handlePolicyClick}>
                             Overview Policies <span>→</span>
                         </button>
                     </div>
@@ -150,7 +166,7 @@ const HomePage = () => {
                             ))}
                             </tbody>
                         </table>
-                        <button className="goto-button">
+                        <button className="goto-button" onClick={handleClaimsClick}>
                             Overview Claims <span>→</span>
                         </button>
                     </div>
@@ -174,7 +190,7 @@ const HomePage = () => {
                             ))}
                             </tbody>
                         </table>
-                        <button className="goto-button">
+                        <button className="goto-button" onClick={handlePaymentClick}>
                             All Payments <span>→</span>
                         </button>
                     </div>

@@ -72,9 +72,19 @@ form p {
     box-sizing: border-box;
 }
 
-input[type="email"]::placeholder,
-input[type="password"]::placeholder {
-    color: #aaa;
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: #fafafa;
+    outline: none;
+    box-sizing: border-box;
 }
 
 input[type="checkbox"] {

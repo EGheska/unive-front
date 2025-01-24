@@ -28,7 +28,7 @@ const SignUpForm = () => {
     }, [password, email])
 
     useEffect(() => {
-        console.log(isChecked)
+        // console.log(isChecked)
         if (containerRef.current) {
             const activeForm = containerRef.current.querySelector(
                 isSignUp ? ".sign-up-form" : ".sign-in-form"
