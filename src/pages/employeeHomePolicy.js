@@ -18,9 +18,33 @@ const EmployeeHomePolicy = () => {
                     <hr></hr>
                     <div className="customer-claims-description">
                         <h2>Policy overview</h2>
-                        <p className="claim-text">{"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer facilisis urna sed fringilla pharetra. Phasellus tempus vulputate velit, nec finibus lacus egestas vitae. Aenean laoreet facilisis pretium. Nam consequat, nibh id viverra aliquet, orci tortor mollis diam, in luctus turpis odio eu eros. Aenean accumsan vestibulum diam, non fringilla elit imperdiet vel. Sed nec metus euismod, porttitor ligula sit amet, mollis metus. Sed lacus metus, suscipit et mauris ac, elementum varius odio. Etiam ut sollicitudin ipsum.\n" +
+                        <p className="claim-text">{
+                            "Policy Coverage Summary\n" +
+                            "General Liability Insurance\n" +
                             "\n" +
-                            "Sed nec pulvinar arcu. In hac habitasse platea dictumst. Nullam non felis enim. Morbi blandit aliquam erat, eget bibendum ex ultrices ac. Aliquam sed venenatis est. Donec malesuada dolor eget euismod placerat. Donec non auctor nisi. Nunc a mi viverra, aliquam leo nec, vestibulum elit. Ut ut diam erat. Duis vel nisi sit amet arcu blandit consectetur sit amet quis nunc. Nunc a aliquam turpis. Vestibulum ullamcorper egestas tellus, sed varius ante tempus et."}</p>
+                            "Coverage Limit: $1,000,000 per occurrence / $2,000,000 aggregate\n" +
+                            "Description: Protects against claims of bodily injury, property damage, or personal injury arising from your business operations.\n" +
+                            "Commercial Property Insurance\n" +
+                            "\n" +
+                            "Coverage Limit: $500,000 building / $250,000 contents\n" +
+                            "Description: Covers physical assets, such as buildings, equipment, inventory, and furniture, against risks like fire, theft, and natural disasters.\n" +
+                            "Business Interruption Insurance\n" +
+                            "\n" +
+                            "Coverage Limit: $100,000\n" +
+                            "Description: Reimburses lost income and operating expenses if your business is temporarily unable to operate due to a covered event.\n" +
+                            "Workers’ Compensation Insurance (if applicable)\n" +
+                            "\n" +
+                            "Coverage Limit: As required by state law\n" +
+                            "Description: Provides medical benefits and wage replacement to employees injured on the job.\n" +
+                            "Professional Liability Insurance (Optional)\n" +
+                            "\n" +
+                            "Coverage Limit: $1,000,000 per claim\n" +
+                            "Description: Covers errors, omissions, or negligence in professional services provided by your business.\n" +
+                            "Cyber Liability Insurance (Optional)\n" +
+                            "\n" +
+                            "Coverage Limit: $500,000\n" +
+                            "Description: Protects against losses from cyberattacks, data breaches, and other digital threats."
+                        }</p>
                     </div>
                     <div className="payment-detailed-container-home-claim">
                         <div className="payment-detailed-container-inner">

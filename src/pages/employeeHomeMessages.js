@@ -14,18 +14,12 @@ const EmployeeHomeMessages = () => {
                 <div className="customer-claims-container-main">
                     <div className="message-center">
                         <div className="message-center-customer-info">
-                            <img src="asd" className="customer-image-message"></img>
+                            <img src="/me.png" className="customer-image-message"></img>
                             <span>Dmytro Taras</span>
                             <span className="customer-no-span">ZW123456789</span>
                         </div>
                         <div>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer facilisis urna sed
-                            fringilla pharetra. Phasellus tempus vulputate velit, nec finibus lacus egestas vitae.
-                            Aenean laoreet facilisis pretium. Nam consequat, nibh id viverra aliquet, orci tortor mollis
-                            diam, in luctus turpis odio eu eros. Aenean accumsan vestibulum diam, non fringilla elit
-                            imperdiet vel. Sed nec metus euismod, porttitor ligula sit amet, mollis metus. Sed lacus
-                            metus, suscipit et mauris ac, elementum varius odio. Etiam ut sollicitudin ipsum.\n" +
-                            "\n" +
+                           Dear Unive, could you please check the claim report i've sent about the fire in the offices
                         </div>
                     </div>
                 </div>

@@ -7,11 +7,11 @@ const CustomerInformationComponent = ({personalInfoDTO}) => {
 
 
     useEffect(() => {
-        if (window.location.pathname === "/new-customer/validation") {
-            setIsValidation(false);
+        if (window.location.pathname === "/customer") {
+            setIsValidation(true);
             console.log(isValidation + "CustomerInformationComponent");
         } else {
-            setIsValidation(true);
+            setIsValidation(false);
             console.log(isValidation + "CustomerInformationComponent");
         }
     }, [isValidation]);

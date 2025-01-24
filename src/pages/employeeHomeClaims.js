@@ -31,9 +31,21 @@ const EmployeeHomeClaims = () => {
                     {/* Case Description */}
                     <div className="customer-claims-description">
                         <h2>Case</h2>
-                        <p className="claim-text">{"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer facilisis urna sed fringilla pharetra. Phasellus tempus vulputate velit, nec finibus lacus egestas vitae. Aenean laoreet facilisis pretium. Nam consequat, nibh id viverra aliquet, orci tortor mollis diam, in luctus turpis odio eu eros. Aenean accumsan vestibulum diam, non fringilla elit imperdiet vel. Sed nec metus euismod, porttitor ligula sit amet, mollis metus. Sed lacus metus, suscipit et mauris ac, elementum varius odio. Etiam ut sollicitudin ipsum.\n" +
+                        <p className="claim-text">{
+                            "Subject: Insurance Claim Submission for YP123546\n" +
                             "\n" +
-                            "Sed nec pulvinar arcu. In hac habitasse platea dictumst. Nullam non felis enim. Morbi blandit aliquam erat, eget bibendum ex ultrices ac. Aliquam sed venenatis est. Donec malesuada dolor eget euismod placerat. Donec non auctor nisi. Nunc a mi viverra, aliquam leo nec, vestibulum elit. Ut ut diam erat. Duis vel nisi sit amet arcu blandit consectetur sit amet quis nunc. Nunc a aliquam turpis. Vestibulum ullamcorper egestas tellus, sed varius ante tempus et."}</p>
+                            "Dear Unive,\n" +
+                            "\n" +
+                            "I am writing to formally submit a claim under my business insurance policy for an incident that occurred on 29.01.2025. Below are the details of the claim:\n" +
+                            "\n" +
+                            "Policy Information\n" +
+                            "Policyholder Name: SomeBusiness INC\n" +
+                            "Policy Number: YP123456\n" +
+                            "Incident Details\n" +
+                            "Date of Incident: 29.01.2025\n" +
+                            "Location: Enschede\n" +
+                            "Description of Incident: A fire damaged our office premises"
+                        }</p>
                     </div>
 
                     {/* Claim Details Section */}
